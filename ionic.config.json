@@ -3,5 +3,12 @@
   "integrations": {
     "capacitor": {}
   },
-  "type": "angular"
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/tasks",
+      "proxyUrl": "https://todoschihebbjm.herokuapp.com/api"
+    }
+  ]
 }
+

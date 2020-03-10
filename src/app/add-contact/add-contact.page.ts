@@ -52,6 +52,7 @@ export class AddContactPage implements OnInit {
         profession: Profession_value
         });
       
+        
         this.route.navigate(['/home']);
       
         

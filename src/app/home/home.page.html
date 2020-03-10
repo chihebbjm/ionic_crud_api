@@ -9,29 +9,21 @@
 <ion-content >
   
   <div id="container">
-   
-    <!-- 
-    <ion-list class="twocolumns">
-     
-      <ion-item *ngFor="let f of users; let i = index " (click)="delete(f)"> {{f.nom}} {{f.prenom}} </ion-item>
-     
-    </ion-list>
-
-  --> 
-    <ion-list>
+  
+    <ion-list style="margin: 10px;">
     
 
-      <ion-item-sliding  *ngFor="let f of users; let i = index ">
+      <ion-item-sliding  *ngFor="let f of users;">
     
         <ion-item>
           {{f.nom}} {{f.prenom}}
           <div slot="end">
-              <ion-button (click)="updateItem(i)"><ion-icon name="create"></ion-icon></ion-button>
+              <ion-button (click)="updateItem(f.id)"><ion-icon name="create"></ion-icon></ion-button>
           </div>
         </ion-item>
     
         <ion-item-options>
-          <ion-button color="danger"  (click)="removeItem(i)"><ion-icon name="trash"></ion-icon>Delete</ion-button>
+          <ion-button color="danger"  (click)="removeItem(f.id)"><ion-icon name="trash"></ion-icon>Delete</ion-button>
         </ion-item-options>
       </ion-item-sliding>
     
